@@ -1,0 +1,55 @@
+version: '3.4'
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: always
+    depends_on:
+      - database
+    networks:
+      - local
+
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    restart: always
+    networks:
+      - local
+
+  database:
+    container_name: database
+    image: mariadb
+    restart: always
+    volumes:
+      - data:/var/lib/mysql
+      - ./database/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=glopglop
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=pifou
+      - MYSQL_PASSWORD=pasglop
+    networks:
+      - local
+
+  reverse-proxy:
+    container_name: reverse-proxy
+    build:
+      context: .
+      dockerfile: reverse-proxy/Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - local
+
+networks:
+  local:
+
+volumes:
+  data:

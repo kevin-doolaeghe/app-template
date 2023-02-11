@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "frontend",
+      "composeLaunchUrl": "http://localhost",
+      "serviceActions": {
+        "backend": "StartDebugging",
+        "database": "StartWithoutDebugging",
+        "frontend": "StartDebugging",
+        "reverse-proxy": "StartWithoutDebugging"
+      }
+    }
+  }
+}
