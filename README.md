@@ -27,3 +27,5 @@ docker-compose up -d
 * [Using MariaDB in an ASP.NET Core API with Entity Framework Core](https://blog.georgekosmidis.net/using-mariadb-in-an-aspnet-core-api-with-entity-framework-core.html)
 * [NGINX Docker with SSL Encryption (Self-signed)](https://mpolinowski.github.io/docs/DevOps/NGINX/2020-08-27--nginx-docker-ssl-certs-self-signed/2020-08-27/)
 * [Nginx HTTPS configuration redirects to faulty URL](https://serverfault.com/questions/812633/nginx-https-configuration-redirects-to-faulty-url)
+* [Introduction à Razor Pages dans ASP.NET Core | Microsoft Learn](https://learn.microsoft.com/fr-fr/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio)
+* [ASP.NET Razor Markup](https://www.w3schools.com/asp/razor_intro.asp)
